@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="icon" sizes="16x16" href="images/PARIS ICON" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+</head>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Header container */
+    #heading {
+      background-color: rgb(211, 210, 210);
+      color: #000;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #office p {
+      margin: 0;
+      font-weight: bold;
+      font-size: 16px;
+      margin-left: 20px;
+    }
+
+    /* Desktop menu */
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-left: 150px;
+    }
+
+    .menu a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* Visitors button */
+    .visit {
+      background-color: darkgreen;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      width: 120px;
+      margin-right: -10px;
+      height: 20px;
+      
+    }
+
+    /* Hamburger icon */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: black;
+      border-radius: 2px;
+    }
+
+    /* Mobile menu (hidden by default) */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #f4f4f4;
+      padding: 15px;
+    }
+
+    .mobile-menu a, 
+    .mobile-menu .visit {
+      margin: 8px 0;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    .mobile-visit button{
+      height: 40px;
+      width: 90px;
+      background-color: green;
+      border-radius: 30px;
+      font-size: 18px;
+      border: none;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu, .visit {
+        display: none;
+      }
+      #office p{
+        margin-left: -10px;
+      }
+      .hamburger {
+        display: flex;
+        margin-top: -10px;
+      }
+      .mobile-menu.show {
+        display: flex;
+      }
+
+
+    }
+
+        body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #logo {
+      height: 120px;
+      width: 120px;
+      border-radius: 100%;
+      background-color: rgb(10, 78, 1);
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+    #logo p {
+      margin-left: 16px;
+      font-family: 'Fredoka One', cursive;
+      font-size: 34px;
+      color: #ffffff;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    #aime1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 18px;
+      color: #ffffff;
+      margin-top: -72px;
+      margin-left: 43px;
+    }
+
+    /* Search */
+    .search-icon {
+      font-size: 30px;
+      cursor: pointer;
+      padding: 15px;
+      margin-left: 200px;
+      position: absolute;
+      margin-top: -40px;
+    }
+    .search-panel {
+      position: fixed;
+      top: -120px;
+      left: 0;
+      width: 100%;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1200;
+      transition: top 0.3s ease-in-out;
+    }
+    .search-panel.active { top: 0; }
+    .search-panel input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .search-panel button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
+    .close-btn {
+      position: absolute;
+      right: 150px;
+      top: 15px;
+      font-size: 48px;
+      cursor: pointer;
+      color: red;
+    }
+
+    /* Desktop Nav */
+    #anchor {
+      display: flex;
+      gap: 48px;
+      margin-left: 380px;
+      font-weight: bold;
+      margin-top: -15px;
+    }
+    #anchor a {
+      text-decoration: none;
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Desktop Ticket */
+    #ticket-desktop {
+      margin-left: 1180px;
+      margin-top: -30px;
+      position: absolute;
+      height: 50px;
+      width: 150px;
+      border-radius: 100px;
+      background-color: rgb(180, 83, 3);
+      border: none;
+    }
+    #ticket-desktop img {
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      margin-left: -65px;
+      margin-top: -18px;
+    }
+    #ticket-desktop a {
+      text-decoration: none;
+      color: white;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: bold;
+      font-size: 18px;
+      position: absolute;
+      margin-top: -12px;
+      margin-left: -22px;
+    }
+
+    #lines {
+      height: 2px;
+      width: 955px;
+      background-color: rgb(179, 179, 179);
+      margin-top: 25px;
+      margin-left: 210px;
+      position: absolute;
+    }
+
+    /* Hamburger icon */
+    .hamburger1 {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 40px;
+      font-size: 28px;
+      z-index: 1300;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu1 {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100%;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+      padding: 50px 20px;
+      transition: right 0.3s ease-in-out;
+      z-index: 1200;
+    }
+    .mobile-menu1.active { right: 0; }
+    .mobile-menu1 a {
+      margin: 15px 0;
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    .mobile-menu1 .ticket-button {
+      margin-top: 20px;
+      height: 50px;
+      width: 150px;
+      border-radius: 100px;
+      background-color: rgb(180, 83, 3);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-menu1 .ticket-button img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+    }
+    .mobile-menu1 .ticket-button a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      #anchor, #ticket-desktop, #lines {
+        display: none;
+      }
+      .hamburger1 {
+        display: block;
+        margin-top: 35px;
+      }
+      .search-icon{
+        margin-top: -80px;
+      }
+            #logo{
+        height: 80px;
+        width: 80px;
+        margin-top: 15px;
+      }
+      #logo p{
+        font-size: 22px;
+        margin-top: -2px;
+        margin-left: 9px;
+      }
+      #aime1{
+        font-size: 12px;
+        margin-top: -55px;
+        margin-left: 33px;
+        color: rgb(255, 255, 255);
+      }
+            .search-icon{
+        margin-top: -45px;
+        margin-left: 110px;
+      }
+    }
+   body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #blankpage {
+      width: 100%;
+      background-color: #e9e9e9;
+      padding: 60px 0;  /* flexible height */
+      margin-top: 120px;
+    }
+
+    #book-activities {
+      margin: 0 auto;
+      max-width: 1400px;      /* max width of content */
+      padding: 0 40px;         /* side spacing */
+      box-sizing: border-box;   /* padding included in width */
+    }
+
+    #book-activities h2 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center; /* center heading */
+    }
+
+    /* GRID layout */
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr); /* 7 columns */
+      gap: 3px;
+      justify-items: center;
+      width: 100%;
+      margin: 0 auto; /* center grid */
+    }
+
+    .activity-card {
+      background: transparent;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .activity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .activity-card img {
+      width: 100%;
+      max-width: 150px; /* fit 7 columns */
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .activity-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .activity-card p {
+      font-size: 13px;
+      margin-top: 10px;
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .activity-card p:hover {
+      cursor: pointer;
+      color: rgb(255, 94, 0);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      .activities-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 per row on tablets */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .activities-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+      }
+    }
+
+    @media (max-width: 400px) {
+      .activities-grid {
+        grid-template-columns: 1fr; /* 1 per row on small phones */
+      }
+    }
+        #book {
+  font-size:30px;
+  font-weight: bold;
+  margin-left: 110px;
+  margin-top: 180px;
+}
+#searchbox input[type="text"]{
+      width: 83%;
+      height: 40px;
+      padding: 14px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-left: 110px;
+
+
+}
+   /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      #book {
+        font-size: 26px;
+        padding: 0 20px;
+        margin-left: 10px;
+      }
+
+      #searchbox input[type="text"] {
+        width: 85%;
+        height: 30px;
+        margin-left: 10px;
+      }
+    }
+#largeblank{
+  height: auto;
+  width: 100%;
+  background-color: #ebebeb;
+  margin-top: 100px;
+}
+#cycle{
+  margin-left: 70px;
+}
+#h4{
+  margin-left: 100px;
+  margin-top: -35px;
+  font-size: 25px;
+}
+#summerparis{
+  margin-left: 70px;
+  margin-top: -40px;
+  font-size: 18px;
+}
+#summerparis span{
+  color: green;
+  font-weight: bold;
+}
+#summerparis span:hover{
+  cursor: pointer;
+  color: green;
+  text-decoration: underline;
+
+}
+#citypass{
+  margin-left: 110px;
+  height: 190px;
+  width: 260px;
+  margin-top: -15px;
+}
+#passcity{
+  margin-left: 110px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#passcity:hover{
+  cursor: pointer;
+  color: orangered;
+  text-decoration: underline;
+}
+#content{
+  margin-left: 110px;
+  font-size: 14px;
+  margin-top: -15px;
+}
+#from{
+  margin-left: 338px;
+  color: orangered;
+  font-size: 14px;
+  margin-top: -15px;
+}
+#euro{
+  margin-left: 326px;
+  margin-top: -15px;
+}
+#euro i{
+  font-size: 16px; 
+  font-weight: bold; 
+  color: orangered;
+
+}
+#rupees{
+  margin-left: 344px;
+  margin-top: -25px;
+  font-size: 20px;
+  color: orangered;
+  font-weight: bold;
+
+}
+#star{
+  margin-left: 110px;
+  color: rgb(255, 187, 0);
+}
+#per{
+  margin-left: 220px;
+  margin-top: -20px;
+  font-size: 13px;
+}
+    
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      #largeblank{
+  height: auto;
+  width: 100%;
+  background-color: #ebebeb;
+  margin-top: 100px;
+}
+      #anchor, #ticket-desktop, #lines {
+        display: none;
+      }
+      .hamburger1 {
+        display: block;
+        margin-top: 35px;
+      }
+      .search-icon{
+        margin-top: -80px;
+      }
+      #logo{
+        height: 80px;
+        width: 80px;
+        margin-top: 15px;
+      }
+      #logo p{
+        font-size: 22px;
+        margin-top: -2px;
+        margin-left: 9px;
+      }
+      #aime1{
+        font-size: 12px;
+        margin-top: -55px;
+        margin-left: 33px;
+        color: rgb(255, 255, 255);
+      }
+      .search-icon{
+        margin-top: -45px;
+        margin-left: 110px;
+      }
+      #basket1 a p{
+        margin-left: 110px;
+      }
+      #cycle{
+        margin-left: 10px;
+      }
+      #h4{
+        margin-left: 45px;
+        font-size: 22px;
+      }
+      #summerparis{
+        font-size: 11px;
+        margin-left: 10px;
+      }
+
+
+    }
+        .shop-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px 60px;
+      margin-top: -50px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      transition: transform 0.2s ease;
+      opacity: 0; /* start hidden */
+      transform: translate(-60px, 60px);
+      animation: fadeUpRight 1.2s ease forwards;
+    }
+
+    /* Stagger animation */
+    .product-card:nth-child(1) { animation-delay: 0.2s; }
+    .product-card:nth-child(2) { animation-delay: 0.4s; }
+    .product-card:nth-child(3) { animation-delay: 0.6s; }
+    .product-card:nth-child(4) { animation-delay: 0.8s; }
+
+    @keyframes fadeUpRight {
+      from {
+        opacity: 0;
+        transform: translate(-60px, 60px);
+      }
+      to {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+
+    .product-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.6s ease;
+    }
+
+    .product-img:hover {
+      transform: scale(1.2) rotate(5deg);
+    }    
+
+    .product-title {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    .product-desc {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-weight: bold;
+      font-size: 18px;
+      color: orangered;
+      margin: 25px 0 8px;
+    }
+
+    .product-rating i {
+      color: gold;
+      margin-right: 3px;
+    }
+
+    .product-rating span {
+      font-size: 13px;
+      color: #444;
+    }
+
+    #rec {
+      height: 30px;
+      width: 145px;
+      background-color: orangered;
+      position: absolute;
+      margin-top: -50px;
+    }
+
+    #rec p {
+      margin-top: 8px;
+      margin-left: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      color: white;
+    }
+
+    .rotate-box {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+
+    /* Responsive Media Queries */
+    @media (max-width: 1024px) {
+      .shop-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        padding: 20px 40px;
+        margin-top: -15px;
+      }
+      .product-img { height: 160px; }
+      #h4{
+        font-size: 21px;
+        margin-top: -30px;
+      }
+      #summerparis{
+        font-size: 13px;
+      }
+           .shop-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 15px 30px;
+      }
+      .product-img { height: 140px; }
+      .product-title { font-size: 16px; }
+      .product-desc { font-size: 13px; }
+      .product-price { font-size: 16px; }
+    }
+    #cycle img{
+        height: 30px;
+        width: 30px;
+    }
+        .mustdos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px 60px;
+  margin-top: -50px;
+}
+
+.mustdo-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+  transition: transform 0.2s ease;
+  opacity: 0; /* hidden initially */
+  transform: translate(60px, 60px); /* start from bottom-right */
+  animation: fadeUpLeft 1.2s ease forwards;
+}
+
+/* Stagger animation for 4 cards */
+.mustdo-card:nth-child(1) { animation-delay: 0.2s; }
+.mustdo-card:nth-child(2) { animation-delay: 0.4s; }
+.mustdo-card:nth-child(3) { animation-delay: 0.6s; }
+.mustdo-card:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeUpLeft {
+  from { opacity: 0; transform: translate(60px, 60px); }
+  to { opacity: 1; transform: translate(0,0); }
+}
+ /* Responsive Styles */
+  @media (max-width: 1024px) {
+
+    .mustdos-container { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 15px 30px;margin-top: -18px;}
+    
+         .product-img { height: 140px; }
+      .product-title { font-size: 16px; }
+      .product-desc { font-size: 13px; }
+      .product-price { font-size: 16px; }
+  }
+
+
+    /* Container */
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .section h4 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      margin-left: -50px;
+    }
+
+    .section p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      margin-left: -50px;
+    }
+    /* Contact link */
+    #contantteam a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: black;
+      display: inline-block;
+      margin-top: -15px;
+      transition: 0.3s;
+      margin-left: -50px;
+    }
+
+    #contantteam a:hover {
+      color: rgb(19, 90, 1);
+      text-decoration: underline;
+    }
+
+    /* History Section */
+    #parishis p {
+      font-size: 1rem;
+      margin-bottom: 55px;
+      margin-top: -15px;
+    }
+
+    #parishis span {
+      font-weight: bold;
+      color: rgb(0, 53, 0);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #parishis span:hover {
+      color: rgb(0, 90, 0);
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .section h4 {
+        font-size: 1.5rem;
+        margin-left: 1px;
+      }
+      .section p {
+        font-size: 0.95rem;
+        text-align: justify;
+        margin-left: -2px;
+      }
+      #contantteam {
+        margin-left: 50px;
+      }
+      .img-box img{
+        margin-left: 50px;
+        width: 30px;
+          position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
+      }
+    }
+/* Image */
+.img-box {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;  /* original image size limit */
+  margin: 20px auto; /* center image */
+  margin-left: -50px;
+}
+
+.img-box img {
+  width: 100%;       /* responsive width */
+  height: auto;      /* maintain aspect ratio */
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.4s ease;
+  object-fit: cover;  /* keeps aspect ratio and covers fully */
+
+}
+
+.img-box:hover img {
+  transform: scale(1.08);
+}
+
+/* Caption Center */
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(16px, 4vw, 26px); /* responsive font size */
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.caption i {
+  color: red;
+  font-size: 1em;
+}
+
+.img-box:hover .caption {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Mobile friendly: show caption on tap */
+@media (hover: none) {
+  .caption {
+    opacity: 1;  /* always visible on mobile */
+  }
+  .img-box img {
+    transform: none;
+    margin-left: 70px;
+  }
+}
+.img-box:hover .caption {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+/* Heading */
+.reviews-heading {
+    margin: 40px auto 20px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 80px;
+    margin-top: 120px;
+}
+
+/* Overall rating */
+.reviews-rating {
+    color: rgb(255, 187, 0);
+    font-size: 28px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-left: 80px;
+}
+.reviews-rating p {
+    color: black;
+    font-size: 18px;
+    margin: 10px;
+    margin-top: 5px;
+}
+.reviews-rating span {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+/* Reviews container */
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 5%;
+}
+
+/* Review card */
+.review-card {
+    background-color: #eeeeee;
+    flex: 1 1 300px;
+    max-width: 350px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-card .name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.review-card .stars {
+    color: rgb(255, 187, 0);
+    font-size: 20px;
+    display: flex;
+    gap: 3px;
+    margin-bottom: 5px;
+}
+.review-card .rating {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: -25px;
+    margin-left: 130px;
+}
+.review-card .feedback-title {
+    font-size: 15px;
+    margin-bottom: 5px;
+
+}
+.review-card .feedback-text {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .reviews-heading {
+        font-size: 24px;
+        margin-left: 10px;
+        margin-top: 120px;
+
+    }
+    .reviews-rating {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    .reviews-rating p{
+        margin-top: -40px;
+        margin-left: 170px;
+        font-size: 15px;
+    }
+    .reviews-
+        .review-card {
+        max-width: 100%;
+    }
+    .review-card .stars{
+        display: flex;
+    }
+}
+    /* footer */
+#back{
+  height: 40px;
+  width: 100%;
+  background-color: #e4e4e4;
+  margin-top: -50px;
+}
+#back1{
+  margin-left: 200px;
+  margin-top: -5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+#back a{
+  color: rgb(1, 88, 1);
+  font-weight: bold;
+  font-size: 12px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#back a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+#blank{
+  height: 450px;
+  width: 100%;
+  background-color: #28532D;  
+}
+#logo1{
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-left: 600px;
+    margin-top: 30px;
+    
+}
+#logo1 p{
+    margin-left: 22px;
+    color: rgb(0, 0, 0);
+    font-family: 'Fredoka One', cursive;
+    font-size: 34px;
+    color: #1f512b;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#aime{
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px;
+    color: #146111;
+    margin-left:630px;
+    margin-top: -75px;
+}
+#circleicon{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 100%;
+    
+}
+#circleicon .bi{
+    margin-top: 6px;
+    margin-left: 3px;
+}
+#iconcir{
+    display: flex;
+    margin-left: 490px;
+    gap: 10px;
+}
+#circleicon .bi:hover{
+    cursor: pointer;
+    fill: rgb(255, 153, 0);
+    
+}
+#time{
+  margin-left: 310px;
+  margin-top: -160px;
+}
+#time2{
+  margin-left: 230px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+#tic{
+  margin-left: 560px;
+  margin-top: -80px;
+}
+#tic1{
+  margin-left: 490px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-top: 9px;
+
+}
+
+#reviewstars{
+  margin-left: 800px;
+  margin-top: -80px;
+}
+#tic2{
+  margin-left: 730px;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+
+}
+#tic2 span{
+    margin-left: 48px;
+}
+#delivery img{
+  height: 80px;
+  width: 80px;
+  margin-left: 965px;
+  position: absolute;
+  margin-top: -125px;
+
+}
+#delivery1 {
+  margin-left: 930px;
+  margin-top: -60px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+#blank{
+  height: 700px;
+  width: 100%;
+  background-color: #28532D;  
+}
+
+#logo1 {
+  height: 110px;
+  width: 110px;
+  margin-left: 140px;
+}
+#logo1 p {
+  font-size: 28px;
+  margin-left: 16px;
+  margin-top: 4px;
+}
+#aime {
+  font-size: 16px;
+  margin-left: 160px;
+  margin-top: -68px;
+}
+}
+ @media (max-width: 480px) {
+#back {
+  justify-content: center;
+  text-align: center;
+}
+#back1 {
+  font-size: 11px;
+  margin-left: -50px;
+}
+#iconcir{
+  display: flex;
+  margin-left: 60px;
+  gap: 10px;
+}
+#circleicon {
+  height: 28px;
+  width: 28px;
+}
+#circleicon svg {
+  width: 16px;
+  height: 16px;
+  margin-top: -28px;
+}
+#time{
+  margin-left: 180px;
+  margin-top: -430px;
+}
+#time2{
+  margin-left: 100px;
+}
+#tic{
+  margin-left: 180px;
+  margin-top: 40px;
+}
+#tic1{
+  margin-left: 100px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-top: 9px;
+
+}
+
+#reviewstars{
+  margin-left: 180px;
+  margin-top: 40px;
+}
+#tic2{
+  margin-left: 120px;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+
+}
+#tic2 span{
+    margin-left: 45px;
+}
+#delivery img{
+  height: 80px;
+  width: 80px;
+  margin-left: 150px;
+  position: absolute;
+  margin-top: -5px;
+
+}
+#delivery1 {
+  margin-left: 100px;
+  margin-top: 80px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+
+}
+
+}
+#listing{
+height: 420px;
+width: 100%;
+background-color: rgb(214, 214, 214);
+}
+/* #list{
+  height: 200px;
+  width: 100%;
+  background-color: #bbb;
+} */
+#pointsss ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#pointsss li {
+  margin-bottom: 13px;
+}
+ #pointsss a {
+  margin-left: 100px;
+  color: black;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+
+}
+#pointsss1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -135px;
+}
+
+#pointsss1 li {
+  margin-bottom: 13px;
+}
+ #pointsss1 a {
+  margin-left: 40px;
+  color: black;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+
+}
+#pointsss2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -135px;
+}
+
+#pointsss2 li {
+  margin-bottom: 13px;
+}
+ #pointsss2 a {
+  margin-left: 60px;
+  color: black;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+
+}
+#break {
+  display: block;
+  margin-left: 60px;
+}
+#pointsss3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -153px;
+}
+
+#pointsss3 li {
+  margin-bottom: 13px;
+}
+ #pointsss3 a {
+  margin-left: 60px;
+  color: rgb(255, 123, 0);
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+
+}
+#break{
+    font-size: 14px; 
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+@media (max-width: 768px) {
+#listing{
+height: 570px;
+width: 100%;
+background-color: rgb(214, 214, 214);
+margin-top: -55px;
+
+}
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  tr {
+    display: flex;
+    flex-wrap: wrap; /* wrap cells into multiple rows */
+  }
+
+  td {
+    width: 50%; /* 2 columns per row */
+    box-sizing: border-box;
+    padding: 10px; /* optional */
+    margin: 0;
+  }
+
+  #pointsss a,
+  #pointsss1 a,
+  #pointsss2 a,
+  #pointsss3 a {
+    margin-left: 10px; /* remove big left margins */
+    font-size: 12px;
+    display: block;
+  }
+  #pointsss ul{
+    margin-top: -30px;
+  }
+  #pointsss2 ul{
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  #pointsss1 ul{
+    margin-top:  -17px;
+    font-size: 12px;
+  }
+  #pointsss3 ul{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 12px;
+  }
+  #break{
+    margin-top: 10px;
+    font-size: 11px;
+    margin-left: 8px;
+  }
+
+}
+
+
+
+    
+</style>
+<body>
+      <div id="heading">
+    <div id="office">
+      <p>Official Website Paris Jet'aime - Office</p>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="menu">
+      <a href="ParisMap.html" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="darkgreen" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+        </svg>
+        MyParis Jet'aime
+      </a>
+      <a href="ParisBouquity.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="rgb(143, 2, 2)" viewBox="0 0 16 16">
+          <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+        ParisLocal Boutique
+      </a>
+      <a href="ParisShop.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  fill="black" class="bi bi-cart" viewBox="0 0 16 16">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+      </svg></i></a>
+      </a>
+      <a href="ParisLogin.html"> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="black" class="bi bi-person" viewBox="0 0 16 16">
+      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+      </svg></i></a>
+    </div>
+
+    <div class="visit">Visitors</div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu1()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="ParisMap.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="darkgreen" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+        </svg>MyParis Jet'aime
+    </a>
+    <a href="ParisBouquity.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="rgb(143, 2, 2)" viewBox="0 0 16 16">
+          <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z"/>
+        </svg>ParisLocal Boutique
+      </a>
+      <a href="ParisShop.html"><i class="bi bi-cart">    
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  fill="black" class="bi bi-cart" viewBox="0 0 16 16">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+      </svg></i></a>
+      <a href="ParisLogin.html"><i class="bi bi-person">   
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="black" class="bi bi-person" viewBox="0 0 16 16">
+      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+      </svg></i></a>
+    <div class="mobile-visit"><button>Visitors</button></div>
+
+  </div>
+
+
+
+    <div id="logo"><br>
+    <p>PAriS</p>
+  </div><br>
+  <div id="aime1">je t’aime</div>
+
+  <!-- Search icon -->
+  <div class="search-icon" onclick="toggleSearch()">            
+    <!-- <i class="bi bi-search"></i> -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+    </svg>
+</div>
+
+  <!-- Slide-in Search Panel -->
+  <div id="searchPanel" class="search-panel">
+    <span class="close-btn" onclick="toggleSearch()">×</span>
+    <input type="text" id="searchInput" placeholder="Find shows..." oninput="showButton()" />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <!-- Desktop Nav -->
+  <div id="anchor">
+    <a href="">Now in Paris</a>
+    <a href="">Discover</a>
+    <a href="">Attractions</a>
+    <a href="">Events</a>
+    <a href="">Play Your Stay</a>
+    <a href="">Paris By District</a>
+  </div>
+  <button id="ticket-desktop">
+    <img src="images1/ticket-removebg-preview.png" alt="">
+    <a href="ParisTicket.html">Ticketing</a>
+  </button>
+  <div id="lines"></div>
+
+  <!-- Hamburger -->
+  <div class="hamburger1" onclick="toggleMenu2()">☰</div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu1" id="mobileMenu1">
+    <a href="">Now in Paris</a>
+    <a href="">Discover</a>
+    <a href="">Attractions</a>
+    <a href="">Events</a>
+    <a href="">Play Your Stay</a>
+    <a href="">Paris By District</a>
+
+    <!-- Separate Ticket -->
+    <button class="ticket-button">
+      <img src="images1/ticket-removebg-preview.png" alt="">
+      <a href="ParisTicket.html">Ticketing</a>
+    </button>
+  </div>
+
+
+  <!-- Book your activities in Paris -->
+  <div id="blankpage">
+    <div id="book-activities">
+      <h2>Book your activities in Paris</h2>
+      <div class="activities-grid">
+        <div class="activity-card">
+          <a href="#"><img src="images2/My Favorite Museums in Paris.jpg" alt="Museums & Exhibitions"></a>
+          <p>Museums & Exhibitions <br> in Paris</p>
+        </div>
+        <div class="activity-card">
+          <a href="#"><img src="images2/paris raise.jpg" alt="Seine Cruises"></a>
+          <p>Cruises on the Seine</p>
+        </div>
+        <div class="activity-card">
+          <a href="#"><img src="images2/paris ticket.jpg" alt="Monuments Tickets"></a>
+          <p>Monuments de Paris Tickets</p>
+        </div>
+        <div class="activity-card">
+          <a href="#"><img src="images2/paris make.jpg" alt="Activities and Experience"></a>
+          <p>Activities and Experience</p>
+        </div>
+        <div class="activity-card">
+          <a href="#"><img src="images2/paris show.jpg" alt="Cabarets & Shows"></a>
+          <p>Cabarets and Shows Paris</p>
+        </div>
+        <div class="activity-card">
+          <a href="#"><img src="images2/paris around.jpg" alt="Transportation"></a>
+          <p>Transportation: Getting around Paris</p>
+        </div>
+        <div class="activity-card">
+          <a href="#"><img src="images2/paris city pass.jpg" alt="Paris Passlib"></a>
+          <p>Paris Passlib' - Paris Official City Pass</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<h2 id="book">Book +600 activities and museums in Paris with the only official <br> shop!</h2>
+<br>
+<div id="searchbox">
+    <input type="text" id="search" placeholder="Find Here...">
+</div>
+
+
+
+<!-- Main Page -->
+<!-- Main Page -->
+<div id="largeblank">
+    <br><br>
+<!-- Things to see and do in Paris -->
+
+          <div id="cycle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-bicycle" viewBox="0 0 16 16">
+          <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5m1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139zM8 9.057 9.598 6.5H6.402zM4.937 9.5a2 2 0 0 0-.487-.877l-.548.877zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53z"/>
+          </svg></div>
+
+          <h4 id="h4">Things to see and do in Paris</h4>
+          <br>
+          <p id="summerparis">Find a selection of activities to do and ideas for <span>outings & experiences</span> to make the most of your summer in Paris.</p><br>
+
+
+
+  <div class="shop-container">
+    <!-- Disneyland -->
+    <div class="product-card">
+      <div class="rotate-box">
+        <img src="images2/paris dianey land.jpg" alt="Disneyland" class="product-img">
+      </div>
+      <h3 class="product-title">Disneyland Tickets</h3>
+      <p class="product-desc">Enjoy the Family & Friends ticket offer! For<br> visits until October 16, 2025, for groups of <br>4 to 6 people maximum, and for 1-day<br> dated tickets, get $20 back per ticket!</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 72</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+        <span>4.9/5</span>
+      </div>
+    </div>
+
+    <!-- Paris Passlib -->
+    <div class="product-card">
+      <div class="rotate-box">
+        <img src="images2/paris city pass2.jpg" alt="Paris Passlib" class="product-img">
+      </div>
+      <h3 class="product-title">Paris Passlib - City Pass <br>Officiel</h3>
+      <p class="product-desc">Explore Paris easily with the City Pass <br>Officiel, 100% digital, flexible and<br> economical. Buy now and enjoy Paris<br> at your own pace!</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 89</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star"></i>
+        <span>4.4/5</span>
+      </div>
+    </div>
+
+    <!-- Panoramart -->
+    <div class="product-card">
+      <div class="rotate-box">
+        <img src="images2/paris mont.jpg" alt="Montparnasse" class="product-img">
+      </div>
+      <h3 class="product-title">PANORAMART Exhibition at <br>Tour Montparnasse</h3>
+      <p class="product-desc">Admire a unique art exhibition and enjoy the<br> best panoramic view of Paris at 210 meters <br>above sea level.</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 23.50</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <span>5/5</span>
+      </div>
+    </div>
+
+    <!-- Jardin d'Acclimatation -->
+    <div class="product-card">
+      <div class="rotate-box">
+        <img src="images2/paris accum.jpg" alt="Jardin d'Acclimatation" class="product-img">
+      </div>
+      <div id="rec"><p>With the Family!</p></div><br>
+      <h3 class="product-title">Jardin d'Acclimatation</h3>
+      <p class="product-desc">Enjoy a unique experience in the most<br> Parisian of gardens: the Jardin d'<br> Acclimatation, a symbol of modern Paris and<br> the capital's only amusement park.</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 38</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <span>5/5</span>
+      </div>
+    </div>
+  </div>          
+
+
+<br><br><br><br><br><br>
+<!-- Take advantage of the best sales -->
+
+          <div id="cycle">
+            <img src="images2/golden medal bg-removed.png" alt="" >
+          </div>
+          <h4 id="h4">Take advantage of the best sales</h4>
+          <br>
+          <p id="summerparis">Activities, monuments, shows... discover the most popular activities and outings in Paris</p><br>
+
+
+
+  <div class="mustdos-container">
+<!-- Theater Mogador-The Lion King -->
+    <div class="product-card mustdo-card">
+      <div class="rotate-box">
+        <img src="images2/paris lion king.jpg" alt="Disneyland" class="product-img">
+      </div>
+            <div id="rec"><p>A Must - SEE!</p></div><br>
+
+      <h3 class="product-title">Theater Mogador - The Lion <br>King</h3>
+      <p class="product-desc">Come and discover the original <br>Broadway musical, The Lion King, <br>which has already delighter over <br>114 million spectators <br>worldwide.</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 31.50</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <span>5/5</span>
+      </div>
+    </div>
+
+
+<!-- Tootbus: hop-on hop-offn in bus -->
+    <div class="product-card mustdo-card">
+      <div class="rotate-box">
+        <img src="images2/paris bus.jpg" alt="Paris Passlib" class="product-img">
+      </div>
+      <h3 class="product-title">Tootbus: hop-on hop-off in <br>an eco-responsible bus</h3>
+      <p class="product-desc">Paris Highlights in 24h or 48h in <br>a 100% clean-energy bus, <br>Tootbus criss-crosses the city <br>throughout the day to take you to <br>the main sites of exception, with <br>an opening roof to make the <br>most of the fine weather.</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 26.25</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star"></i>
+        <span>4/5</span>
+      </div>
+    </div>
+
+
+<!-- Croisiere Prestige -->
+    <div class="product-card mustdo-card">
+      <div class="rotate-box">
+        <img src="images2/paris boat.jpg" alt="Montparnasse" class="product-img">
+      </div>
+      <h3 class="product-title">Croisiere Prestige</h3>
+      <p class="product-desc"><p>Departing from Port Debilly in the <br>16th arrondissement, enjoy an <br>unusual experience aboard the <br>Tosca barge and discover the <br>iconic monuments of Paris from <br>the Seine.</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 62</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <span>5/5</span>
+      </div>
+    </div>
+
+<!-- Parc Asterox: a gallic adventure for all the family -->
+    <div class="product-card mustdo-card">
+      <div class="rotate-box">
+        <img src="images2/paris toy.jpg" alt="Jardin d'Acclimatation" class="product-img">
+      </div>
+      <h3 class="product-title">Parc Asterix: a Gallic <br>adventure for all the family!</h3>
+      <p class="product-desc">Enjoy over 50 attractions and <br>shows for the whole family: <br>thrilling roller coasters, <br>captivating shows and children's <br>attractions await you for <br>unforgettable memories.</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 65</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <span>5/5</span>
+      </div>
+    </div>
+  </div>      
+  
+<br><br><br><br><br><br>
+<!-- The must-dos in Paris -->
+          <div id="cycle">
+            <img src="images2/paris muti star download.png" alt="" >
+          </div>
+          <h4 id="h4">The must-dos in Paris</h4>
+          <br>
+          <p id="summerparis">The Eiffel Tower,the Sacre Coeur Basilica in Montmartre, a cruise on the Seine...discover the must-sees during your stay in Paris.</p><br>
+
+
+<div class="shop-container">
+  <!-- Eiffel Tower and Seine River -->
+  <div class="product-card">
+    <div class="rotate-box">
+      <img src="images2/paris eif tow.jpg" alt="Eiffel Tower" class="product-img">
+    </div>
+    <h3 class="product-title">Eiffel Tower and Seine River <br>Cruise</h3>
+    <p class="product-desc">Embark on a unique experience and climb the most iconic monument in Paris.</p>
+    <div class="product-price"><i class="bi bi-currency-euro"></i> 43.80</div>
+    <div class="product-rating">
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-half"></i>
+      <span>4.8/5</span>
+    </div>
+  </div>
+
+  <!-- Louvre Museum -->
+  <div class="product-card">
+    <div class="rotate-box">
+      <img src="images2/paris musem.jpg" alt="Louvre Museum" class="product-img">
+    </div>
+    <h3 class="product-title">Louvre Museum</h3>
+    <p class="product-desc">Visit the largest museum in Paris and admire Leonardo da Vinci's Mona Lisa.</p>
+    <div class="product-price"><i class="bi bi-currency-euro"></i> 22</div>
+        <div class="product-rating">
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-half"></i>
+      <span>4.8/5</span>
+    </div>
+
+  </div>
+
+  <!-- Arc de Triomphe -->
+  <div class="product-card">
+    <div class="rotate-box">
+      <img src="images2/paris arc.jpg" alt="Arc de Triomphe" class="product-img">
+    </div>
+    <h3 class="product-title">Arc de Triomphe</h3>
+    <p class="product-desc">Enjoy a breathtaking view of Paris from this historical monument.</p>
+    <div class="product-price"><i class="bi bi-currency-euro"></i> 16</div>
+        <div class="product-rating">
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-half"></i>
+      <span>4.9/5</span>
+    </div>
+
+  </div>
+
+  <!-- Pantheon -->
+  <div class="product-card">
+    <div class="rotate-box">
+      <img src="images2/paris pantheon.jpg" alt="Pantheon" class="product-img">
+    </div>
+    <h3 class="product-title">Pantheon</h3>
+    <p class="product-desc">A place dedicated to the memory of men and women who shaped French history.</p>
+    <div class="product-price"><i class="bi bi-currency-euro"></i> 13</div>
+        <div class="product-rating">
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-half"></i>
+      <span>4.9/5</span>
+    </div>
+
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+<!-- Unusual Paris -->
+          <div id="cycle">
+            <img src="images/paris paradownload.png" alt="" >
+          </div>
+          <h4 id="h4">Unusual Paris</h4>
+          <br>
+          <p id="summerparis">Want to discover Paris in a different way? Little-known neighborhoods, original activities and other unexpected outings await you.</p><br>
+
+  <div class="mustdos-container">
+<!-- Musee de illusion -->
+    <div class="product-card mustdo-card">
+      <div class="rotate-box">
+        <img src="images2/paris muse de.jpg" alt="Disneyland" class="product-img">
+      </div>
+      <h3 class="product-title">Musee de' I'llusion</h3>
+      <p class="product-desc">Located in the heart of paris, the <br>Musee de I'llusion, the first of its <br>kind in France,invities all <br>generations to enjoy an exceptional <br> multisensory experience.</p>
+
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 19</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <span>5/5</span>
+      </div>
+    </div>
+
+
+<!-- Flight aboard the ballon  -->
+    <div class="product-card mustdo-card">
+      <div class="rotate-box">
+        <img src="images2/paris ballon.jpg" alt="Paris Passlib" class="product-img">
+      </div>
+      <h3 class="product-title">Flight aboard the Ballon</h3>
+      <p class="product-desc">On the program? A 10-minute <br>flight 150 meters above the ground <br>with a panoramic view of all of Paris. <br>The Seine,Montmartre, the <br> landscaped areas or even the <br> nearby Eiffel Tower...</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 20</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <span>5/5</span>
+      </div>
+    </div>
+
+
+<!-- Jardin des plantes  -->
+    <div class="product-card mustdo-card">
+      <div class="rotate-box">
+        <img src="images2/paris plates.jpg" alt="Montparnasse" class="product-img">
+      </div>
+      <h3 class="product-title">Jardin des Plantes</h3>
+      <p class="product-desc"><p>The Jardin des Plantes is a <br>historic botanical garden in the <br>heart of Paris,offering a variety of <br>gardens and museums. You <br>can explore themed gardens and <br>discover the Menagerie, the Zoo <br>of the Jardin des Plantes</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 13</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <span>4.9/5</span>
+      </div>
+    </div>
+
+<!-- Paris sewer museum  -->
+    <div class="product-card mustdo-card">
+      <div class="rotate-box">
+        <img src="images2/paris sewer.jpg" alt="Jardin d'Acclimatation" class="product-img">
+      </div>
+      <h3 class="product-title">Paris Sewer Museum: Self- <br>guided tour</h3>
+      <p class="product-desc">Explore the sewers of Paris for a <br>unique experience beneath the <br>capital! Discover this historic network <br>and its museum, and learn  about its <br>hidden history and water <br> management. Take an immersive <br>guided tour through  the pipes <br>and underground galleries.</p>
+      <div class="product-price"><i class="bi bi-currency-euro"></i> 9</div>
+      <div class="product-rating">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <span>5/5</span>
+      </div>
+    </div>
+  </div>      
+
+<br><br><br><br><br><br>
+<!-- To share and experience together -->
+          <div id="cycle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+          <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098z"/>
+          </svg>
+          </div>
+          <h4 id="h4">To Share and Experience Together</h4>
+          <br>
+          <p id="summerparis">Combined offers, special offers on activities and exhibitions, discover all the good plans to make your stay in Paris a success.</p>
+<br>
+
+<div class="shop-container">
+
+<!-- Visit monet's gardens  -->
+  <div class="product-card">
+    <div class="rotate-box">
+      <img src="images2/paris garden.jpg" alt="Eiffel Tower" class="product-img">
+    </div>
+    <div id="rec"><p>New!</p></div>
+    <h3 class="product-title">Visit Monet's Gardens and <br>Giverny by bike</h3>
+    <p class="product-desc">An unforgettable journey to the heart <br>of French Impressionism: Giverny! <br>This small village about 45 minutes <br>northwest of Paris offers the perfect <br>getaway from the hectic city streets</p>
+    <div class="product-price"><i class="bi bi-currency-euro"></i> 119</div>
+    <div class="product-rating">
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+      <i class="bi bi-star"></i>
+      <span>3.5/5</span>
+    </div>
+  </div>
+
+ 
+<!-- Laduree-Tea time at grand  -->
+  <div class="product-card">
+    <div class="rotate-box">
+      <img src="images2/psris tea.jpg" alt="Louvre Museum" class="product-img">
+    </div>
+    <h3 class="product-title">Laduree - Tea Time at Grand <br>Brunch du Dimanche</h3>
+    <p class="product-desc">Laduree's all-you-can-eat Grand <br>Brunch on the Champs-Elysees <br>offers a varied buffet of dishes, with <br>hot and cold drinks. For tea time, <br>enjoy teas and pastries, including <br>the famous macaroons,in elegant <br>surroundings.</p>
+
+    <div class="product-price"><i class="bi bi-currency-euro"></i> 65</div>
+        <div class="product-rating">
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-half"></i>
+      <span>5/5</span>
+    </div>
+
+  </div>
+
+  <!-- Un gouter presque parfait  -->
+  <div class="product-card">
+    <div class="rotate-box">
+      <img src="images2/paris delicious.jpg" alt="Arc de Triomphe" class="product-img">
+    </div>
+    <div id="rec"><p>Price for 3 people min.</p></div>
+    <h3 class="product-title">Un Gouter Presque Parfait: <br>Saint-Germain-Des-Pres</h3>
+    <p class="product-desc">Get ready for an extraordinary <br>culinary adventure in Saint- <br>Germain-Des-Pres, a magical <br>place where stories of kings and <br>queens mingle with delicious <br>French gastronomy.</p>
+
+    <div class="product-price"><i class="bi bi-currency-euro"></i> 165</div>
+        <div class="product-rating">
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-half"></i>
+      <span>4/5</span>
+    </div>
+
+  </div>
+
+<!-- Chateau de chantilly  -->
+  <div class="product-card">
+    <div class="rotate-box">
+      <img src="images2/paris chateau.jpg" alt="Pantheon" class="product-img">
+    </div>
+    <h3 class="product-title">Chateau de Chantilly</h3>
+    <p class="product-desc">The Cheateau de Chantilly offers <br>an immersive visit with its <br>magnificent castle and varied <br>gardens. It is an ideal destination <br>for families with activities such <br>as the maze and treasure hunts.</p>
+    <div class="product-price"><i class="bi bi-currency-euro"></i> 18</div>
+        <div class="product-rating">
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <span>5/5</span>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Book Section -->
+  <div class="section">
+    <h4>Book for your groups</h4>
+    <p>Choose Paris je t'aime, Office de tourisme to book your activities and mass transit tickets.</p>
+  
+  <div class="img-box">
+    <img src="images2/paris tower2.jpg" alt="Paris Tower">
+    <div class="caption">
+      <span>Paris Tower</span>
+      <i class="bi bi-heart-fill"></i>
+    </div>
+  </div>
+    <div id="contantteam">
+      <a href="#">Contact Our Team</a>
+    </div>
+  </div>
+
+  <!-- History Section -->
+  <div class="section" id="parishis">
+    <p><b>Paris Je T'aime - Tourism Office</b></p>
+    <p>Discover Paris at your leisure, with <b>Paris je t'aime!</b></p>
+
+    <p>
+      Open your eyes and admire the iconic <span>Eiffel Tower</span>, 
+      the <span>Arc de Triomphe</span> or the <span>Sainte-Chapelle</span>...
+      Embark on a fascinating <span>boat cruise</span> on the Seine where 
+      <b>cathédrale Notre-Dame, the Grand Palais or the Hôtel de Ville</b> 
+      reveal themselves from a new angle. On foot, by bike or by public transport, 
+      the <b>monuments</b> are all around you. Rich in culture, the 
+      <b>museums and theatres</b> await you, from the <span>musée du Louvre</span> 
+      to the <span>centre Pompidou</span>, not forgetting Parisian 
+      <b>cabarets</b> like the <span>Moulin Rouge</span> or <span>Paradis Latin</span>.
+    </p>
+
+    <p>
+      Looking for adventure? Explore the <b>secrets of the capital</b>: 
+      street art, immersive experiences, and gourmet cooking classes. 
+      Families can enjoy <span>Cité des Sciences</span>, 
+      the <span>Grande galerie de l'Evolution</span>, 
+      or the <span>musée de l'Illusion</span>.
+    </p>
+
+    <p>
+      To simplify your stay, opt for the <span>Paris Passlib'</span>, 
+      the official tourism pass. It includes museum visits, Seine cruises, 
+      bike rides, and more. Choose from four formulas adapted to your stay.
+    </p>
+
+    <p>
+      Thanks to our partner activities, let yourself be enchanted by the 
+      <b>Magic of Paris</b> and experience unforgettable moments.
+    </p>
+  </div>
+</div><!-- largeblank -->
+
+
+<div data-aos="fade-up">
+    <h4 class="reviews-heading">&nbsp;Customer Reviews</h4>
+
+    <div class="reviews-rating">&nbsp;
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>&nbsp;
+        <p>&nbsp;&nbsp;&nbsp;<span>4.6</span>/5 - 5,263 reviews</p>
+    </div>
+
+    <div class="reviews-container">
+        <div class="review-card" data-aos="fade-up">
+            <p class="name">Julia H.</p>
+            <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="rating"><span>5</span>/5</p>
+            <p class="feedback-title"><b>David Hockney with no queuing!</b><br> July 24th 2025</p>
+            <p class="feedback-text">David Hockney exhibition - fantastic, well worth it. Booking tickets through Paris je t'aime avoided long queues and stress. Highly recommend.</p>
+        </div>
+
+        <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+            <p class="name">Moira M.</p>
+            <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="rating"><span>5</span>/5</p>
+            <p class="feedback-title">July 24th 2025</p>
+            <p class="feedback-text">Great service even on an exceptionally hot day. All staff were very helpful.</p>
+        </div>
+
+        <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+            <p class="name">Olga M.</p>
+            <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="rating"><span>5</span>/5</p>
+            <p class="feedback-title">July 24th 2025</p>
+            <p class="feedback-text">Activity was great.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer -->
+<br><br><br><br><br><br><br><br><br>
+    <div id="back"><br><p id="back1"><a href="Index.html">Paris je t’aime</a> > Customer Center </p>
+    </div>
+
+    <div id="blank"><br>
+       <div id="logo1"><br>
+        <p>PAriS</p>
+       </div><br>
+       <div id="aime">je t’aime
+       </div>
+<br><br><br>
+<div id="iconcir">
+       <div id="circleicon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="rgb(2, 65, 2)" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg>
+       </div>
+
+        <div id="circleicon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="rgb(2, 65, 2)" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+       </div>
+
+        <div id="circleicon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="rgb(2, 65, 2)" class="bi bi-linkedin" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+       </svg>
+       </div>
+
+        <div id="circleicon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="rgb(2, 65, 2)" class="bi bi-tiktok" viewBox="0 0 16 16">
+        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+        </svg>       
+        </div>
+
+        
+        <div id="circleicon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="rgb(2, 65, 2)" class="bi bi-twitter" viewBox="0 0 16 16">
+       <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+      </svg>
+       </div>
+
+
+        <div id="circleicon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="rgb(2, 65, 2)" class="bi bi-pinterest" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+        </svg>  
+        </div>
+
+
+        <div id="circleicon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="rgb(2, 65, 2)" class="bi bi-wechat" viewBox="0 0 16 16">
+        <path d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.32.32 0 0 0-.12.366l.218.81a.6.6 0 0 1 .029.117.166.166 0 0 1-.162.162.2.2 0 0 1-.092-.03l-1.057-.61a.5.5 0 0 0-.256-.074.5.5 0 0 0-.142.021 5.7 5.7 0 0 1-1.576.22M9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.6.6 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.63.63 0 0 0 .098.356"/>
+        <path d="M0 6.826c0 1.455.781 2.765 2.001 3.656a.385.385 0 0 1 .143.439l-.161.6-.1.373a.5.5 0 0 0-.032.14.19.19 0 0 0 .193.193q.06 0 .111-.029l1.268-.733a.6.6 0 0 1 .308-.088q.088 0 .171.025a6.8 6.8 0 0 0 1.625.26 4.5 4.5 0 0 1-.177-1.251c0-2.936 2.785-5.02 5.824-5.02l.15.002C10.587 3.429 8.392 2 5.796 2 2.596 2 0 4.16 0 6.826m4.632-1.555a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0m3.875 0a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0"/>
+        </svg>
+        </div>
+
+        <div id="circleicon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="rgb(2, 65, 2)" class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+        </div>
+
+        <div id="circleicon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="rgb(2, 65, 2)" class="bi bi-twitter-x" viewBox="0 0 16 16">
+       <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+        </svg>
+        </div>
+</div>
+
+
+
+
+   </div>
+
+    <div id="time">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-clock-history" viewBox="0 0 16 16">
+      <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+      <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+      <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+      </svg>
+    </div>
+      <p id="time2">Availability In Real Time</p>
+
+
+    <div id="tic">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-ticket" viewBox="0 0 16 16">
+      <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5z"/>
+      </svg>
+    </div>
+    <p id="tic1">Fast track entry tickets</p>
+
+    <div id="reviewstars">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-stars" viewBox="0 0 16 16">
+      <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+      </svg>
+      </div>
+      <p id="tic2">Verified Customer <br><span>Review</span></p>
+
+
+
+    <div id="delivery">
+     <img src="images1/paris deli.png" alt="">
+    </div>
+    <p id="delivery1">Delivery To Your Hotel</p>
+
+
+<br><br><br><br>
+                 
+<div id="listing" >
+<br><br><br><br><br>
+<table cellpadding="10" cellspacing="5">  
+  <tr>
+<td id="pointsss">
+  <ul>
+    <li><a href="#">DISCOVER PARIS</a></li>
+    <li><a href="#">THINGS TO GO</a></li>
+    <li><a href="#">EVENTS</a></li>
+    <li><a href="#">PLAN YOUR STAY</a></li>
+    <li><a href="#">CRUISES IN PARIS</a></li>
+    <li><a href="#">RESTAURANTS OPEN AT NIGHT</a></li>
+    <li><a href="#">SHOPPING IN PARIS</a></li>
+    <li><a href="#">PARIS DISTRICTS</a></li>
+    <li><a href="#">TRANSPORT PARIS</a></li>
+  </ul>
+</td>    
+
+<td id="pointsss1">
+  <ul>
+    <li><a href="#">ABOUT US</a></li>
+    <li><a href="#">INFORMATION POINTS</a></li>
+    <li><a href="#">NEWS</a></li>
+    <li><a href="#">PRATICAL INFO</a></li>
+    <li><a href="#">CONTACT US</a></li>
+  </ul>
+</td>
+<td id="pointsss2">
+  <ul>
+    <li><a href="#">LEGAL INFORMATION AND PERSONAL DATA</a></li>
+    <li><a href="#">GENERAL CONDITIONS OF SALE  AND TERMS OF USE</a></li>
+    <li><a href="#">CUSTOMER CENTER</a></li>
+    <li><a href="#">FAQ</a></li>
+  </ul>
+
+</td>
+<td id="pointsss3">
+  <ul>
+    <li><a href="#">OUR TOP 10 ACTIVITIES</a></li>
+    <li><a href="#">MUSEUMS AND MONUMENTS</a></li>
+    <li><a href="#">PARIS PASSLIB'</a></li>
+    <li><a href="#">TICKETS</a></li>
+  </ul>
+</td>
+  </tr>
+</table> 
+<br><br><br>
+ <center><p id="break"> COPYRIGHT © PARIS JE T'AIME - TOURIST OFFICE 2015 - 2025 </p></center>
+
+
+
+  <!-- 
+search and Hamburger script -->
+<script>
+  function toggleMenu1() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+  }
+
+  function toggleMenu2() {
+    document.getElementById("mobileMenu1").classList.toggle("active");
+  }
+
+  function toggleSearch() {
+      document.getElementById('searchPanel').classList.toggle('active');
+    }
+  function showButton() {
+      const input = document.getElementById("searchInput").value.trim();
+      const button = document.getElementById("searchBtn");
+      button.style.display = input.length > 0 ? "inline-block" : "none";
+  }
+   
+  </script>
+
+<script>
+
+    const search = document.getElementById("search");
+
+      const placeholders = [
+        "Find Shows...",
+         "Find an activity...",
+         "Find museums...",
+      ];
+
+      let index = 0;
+
+     setInterval(() => {
+      search.placeholder = placeholders[index];
+      index = (index + 1) % placeholders.length;
+      }, 2000); // changes every 2 seconds
+
+
+// search icon script // 
+
+  function toggleSearch() {
+    document.getElementById('searchPanel').classList.toggle('active');
+  }
+
+  function showButton() {
+    const input = document.getElementById("searchInput").value.trim();
+    const button = document.getElementById("searchBtn");
+    if (input.length > 0) {
+      button.style.display = "inline-block";
+    } else {
+      button.style.display = "none";
+    }
+  }
+
+</script>
+
+<!-- AOS animation -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+    duration: 800,
+    once: true
+});
+</script>
+
+
+</body>
+</html>

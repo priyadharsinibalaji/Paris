@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" sizes="16x16" href="images/PARIS ICON" />
+    <link rel="stylesheet" href="Index.css">
+      <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+  <div id="heading">
+    <div id="office">
+      <p>Official Website Paris Jet'aime - Office</p>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="menu">
+      <a href="ParisMap.html" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="darkgreen" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+        </svg>
+        MyParis Jet'aime
+      </a>
+      <a href="ParisBouquity.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="rgb(143, 2, 2)" viewBox="0 0 16 16">
+          <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+        ParisLocal Boutique
+      </a>
+      <a href="ParisShop.html"><i class="bi bi-cart">    
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  fill="black" class="bi bi-cart" viewBox="0 0 16 16">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+      </svg></i></a>
+      </a>
+      <a href="ParisLogin.html"><i class="bi bi-person">   
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="black" class="bi bi-person" viewBox="0 0 16 16">
+      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+      </svg></i></a>
+    </div>
+
+    <div class="visit">Visitors</div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu1()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="ParisMap.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="darkgreen" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+        </svg>MyParis Jet'aime
+    </a>
+    <a href="ParisBouquity.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="rgb(143, 2, 2)" viewBox="0 0 16 16">
+          <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z"/>
+        </svg>ParisLocal Boutique
+      </a>
+      <a href="ParisShop.html"><i class="bi bi-cart">    
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  fill="black" class="bi bi-cart" viewBox="0 0 16 16">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+      </svg></i></a>
+      <a href="ParisLogin.html"><i class="bi bi-person">   
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="black" class="bi bi-person" viewBox="0 0 16 16">
+      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+      </svg></i></a>
+    <div class="mobile-visit"><button>Visitors</button></div>
+  </div>
+
+
+
+    <div id="logo"><br>
+    <p>PAriS</p>
+  </div><br>
+  <div id="aime1">je t’aime</div>
+
+  <!-- Search icon -->
+  <div class="search-icon" onclick="toggleSearch()">            
+    <i class="bi bi-search"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+    </svg>
+</div>
+
+  <!-- Slide-in Search Panel -->
+  <div id="searchPanel" class="search-panel">
+    <span class="close-btn" onclick="toggleSearch()">×</span>
+    <input type="text" id="searchInput" placeholder="Find shows..." oninput="showButton()" />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <!-- Desktop Nav -->
+  <div id="anchor">
+    <a href="">Now in Paris</a>
+    <a href="">Discover</a>
+    <a href="">Attractions</a>
+    <a href="">Events</a>
+    <a href="">Play Your Stay</a>
+    <a href="">Paris By District</a>
+  </div>
+  <button id="ticket-desktop">
+    <img src="images1/ticket-removebg-preview.png" alt="">
+    <a href="ParisTicket.html">Ticketing</a>
+  </button>
+  <div id="lines"></div>
+
+  <!-- Hamburger -->
+  <div class="hamburger1" onclick="toggleMenu2()">☰</div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu1" id="mobileMenu1">
+    <a href="">Now in Paris</a>
+    <a href="">Discover</a>
+    <a href="">Attractions</a>
+    <a href="">Events</a>
+    <a href="">Play Your Stay</a>
+    <a href="">Paris By District</a>
+
+    <!-- Separate Ticket -->
+    <button class="ticket-button">
+      <img src="images1/ticket-removebg-preview.png" alt="">
+      <a href="ParisTicket.html">Ticketing</a>
+    </button>
+  </div>
+ 
+
+ <!-- slider content -->
+<div class="slideshow-container">
+<!-- slide 1-->
+<div class="mySlides fade">
+  <img src="images1/paris nw1.jpg" style="width:100%" height="630px">
+        <p id="para"> What to do in Paris in <br>July 2025?</p>
+      <p id="para1">In July, Paris and its cultural events switch to summer mode. On the programme: <br><b>festivals and open-air cinema,</b> unmissable <b>exhibitions, concerts, shows, <br>family experiences</b>and <b>water sports on the Seine!</b></p>
+       <div id="button">
+       <button><b>Discover</b></button>
+       </div>
+
+    <div id="box">
+    <p id="text">RIGHT NOW IN PARIS</p>
+    <div class="row">
+      <div id="img" data-aos="fade-up">
+        <img src="images1/paris cool.jpg" alt="">
+        <h3>Pratical <br><b>It's hot in Paris! <br>Our top tips for<br>keeping Cool</b></h3>
+      </div>
+
+      <div id="img" data-aos="fade-up">
+        <img src="images1/summer paris.jpg" alt="">
+        <h3><b>EVENT|PARTY|<br>PARIS</b><br><br><b>Paris en Seine: a <br>festival summer, <br>one year after the <br> Games</b></h3>
+      </div>
+
+      <div id="img" data-aos="fade-up">
+        <img src="images1/paris out door.jpg" alt="">
+        <h3><b>OUT DOORS | BEST OF <br><br>Movies Outdoor in <br>Paris</b></h3>
+      </div>
+    </div>
+  </div>
+
+      <div id="img1" >
+    <img src="images1/swim in paris.jpg" alt="" data-aos="zoom-in">
+    <div data-aos="flip-down">
+    <h3 >Swimming in the Seine: a first-ever opening to <br>the public on 25 July in Paris!</h3>
+    <p>From 5 July 2025, Paris will reopen <b>swimming in the Seine</b> with three <br> <b>iconic sites accessible to the public:</b> Bercy, Bras Marie and Bras de <br> Grenelle. This is a <b>major event,</b> <b><span>a legacy of the 2024 Paris Olympic <br> Games.</p></span></b>
+    <p>A total of 11 free, <b>supervised swimming areas await you all summer</b> <br>long in the Seine and elsewhere, from the Bassin de la Villette to the <br> Canal Saint-Martin, <b>including sports centres.</b></p><br></div>
+    <div id="btns">
+    <button>
+        <a href="https://parisjetaime.com/eng/event/swimming-in-the-seine-e1573" id="anchor">EXPLORE THE SWIMMING SITES ON INTERACTIVE <br>MAP</a>
+    </button>
+    </div>
+    </div>
+
+</div>
+
+<!-- slide 2 -->
+<div class="mySlides fade">
+  <img src="images1/paris 2.jpg" style="width:100%" height="630px">
+        <p id="para2">Paris Passlib’ - Official city pass</p>
+      <p id="para3">Discover the official Paris city pass that lets you put together your own <br> programme of Parisian activities. From €59.</p>
+        <div id="button1">
+        <button><b>Buy Now</b></button>
+        </div>
+    <div id="box1">
+    <p id="text">RIGHT NOW IN PARIS</p>
+    <div class="row">
+      <div id="img" data-aos="fade-up">
+        <img src="images1/paris cool.jpg" alt="">
+        <h3>Pratical <br><b>It's hot in Paris! <br>Our top tips for<br>keeping Cool</b></h3>
+      </div>
+
+      <div id="img" data-aos="fade-up">
+        <img src="images1/summer paris.jpg" alt="">
+        <h3><b>EVENT|PARTY|<br>PARIS</b><br><br><b>Paris en Seine: a <br>festival summer, <br>one year after the <br> Games</b></h3>
+      </div>
+
+      <div id="img" data-aos="fade-up">
+        <img src="images1/paris out door.jpg" alt="">
+        <h3><b>OUT DOORS | BEST OF <br><br>Movies Outdoor in <br>Paris</b></h3>
+      </div>
+    </div>
+  </div>
+
+      <div id="img2" >
+    <img src="images1/swim in paris.jpg" alt="" data-aos="zoom-in">
+    <div data-aos="flip-down">
+    <h3 >Swimming in the Seine: a first-ever opening to <br>the public on 25 July in Paris!</h3>
+    <p>From 5 July 2025, Paris will reopen <b>swimming in the Seine</b> with three <br> <b>iconic sites accessible to the public:</b> Bercy, Bras Marie and Bras de <br> Grenelle. This is a <b>major event,</b> <b><span>a legacy of the 2024 Paris Olympic <br> Games.</p></span></b>
+    <p>A total of 11 free, <b>supervised swimming areas await you all summer</b> <br>long in the Seine and elsewhere, from the Bassin de la Villette to the <br> Canal Saint-Martin, <b>including sports centres.</b></p><br></div>
+    <div id="btns">
+    <button>
+        <a href="https://parisjetaime.com/eng/event/swimming-in-the-seine-e1573" id="anchor">EXPLORE THE SWIMMING SITES ON INTERACTIVE <br>MAP</a>
+    </button>
+    </div>
+    </div>
+
+
+</div>
+<!-- slide 3 -->
+<div class="mySlides fade">
+  <img src="images1/pexels-liam-gant-619294-1446624.jpg" style="width:100%" height="630px">
+        <p id="para4">Exhibitions in Paris</p>
+      <p id="para5">Find out about t5he major exhibitions of the moment, so you don't miss <br>out on any of Paris's cultural news.</p>
+        <div id="button2">
+        <button>Discover</button>
+        </div>
+                 <div id="box2">
+    <p id="text">RIGHT NOW IN PARIS</p>
+    <div class="row">
+      <div id="img" data-aos="fade-up">
+        <img src="images1/paris cool.jpg" alt="">
+        <h3>Pratical <br><b>It's hot in Paris! <br>Our top tips for<br>keeping Cool</b></h3>
+      </div>
+
+      <div id="img" data-aos="fade-up">
+        <img src="images1/summer paris.jpg" alt="">
+        <h3><b>EVENT|PARTY|<br>PARIS</b><br><br><b>Paris en Seine: a <br>festival summer, <br>one year after the <br> Games</b></h3>
+      </div>
+
+      <div id="img" data-aos="fade-up">
+        <img src="images1/paris out door.jpg" alt="">
+        <h3><b>OUT DOORS | BEST OF <br><br>Movies Outdoor in <br>Paris</b></h3>
+      </div>
+    </div>
+  </div>
+
+      <div id="img1" >
+    <img src="images1/swim in paris.jpg" alt="" data-aos="zoom-in">
+    <div data-aos="flip-down">
+    <h3 >Swimming in the Seine: a first-ever opening to <br>the public on 25 July in Paris!</h3>
+    <p>From 5 July 2025, Paris will reopen <b>swimming in the Seine</b> with three <br> <b>iconic sites accessible to the public:</b> Bercy, Bras Marie and Bras de <br> Grenelle. This is a <b>major event,</b> <b><span>a legacy of the 2024 Paris Olympic <br> Games.</p></span></b>
+    <p>A total of 11 free, <b>supervised swimming areas await you all summer</b> <br>long in the Seine and elsewhere, from the Bassin de la Villette to the <br> Canal Saint-Martin, <b>including sports centres.</b></p><br></div>
+    <div id="btns">
+    <button>
+        <a href="https://parisjetaime.com/eng/event/swimming-in-the-seine-e1573" id="anchor">EXPLORE THE SWIMMING SITES ON INTERACTIVE <br>MAP</a>
+    </button>
+    </div>
+    </div>
+
+
+</div>
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+
+<br><br><br>
+
+
+
+<!-- footer -->
+<br><br><br><br><br><br><br><br><br>
+<div id="back"><br><p id="back1"><a href="Index.html">Paris je t’aime</a> > Customer Center </p>
+    </div>
+
+    <div id="blank"><br>
+       <div id="logo1"><br>
+        <p>PAriS</p>
+       </div><br>
+       <div id="aime">je t’aime
+       </div>
+<br><br><br>
+<div id="iconcir">
+       <div id="circleicon">
+        <i class="bi bi-facebook"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="rgb(2, 65, 2)" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg>
+       </div>
+
+        <div id="circleicon">
+        <i class="bi bi-instagram"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="rgb(2, 65, 2)" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+       </div>
+
+        <div id="circleicon">
+        <i class="bi bi-linkedin"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="rgb(2, 65, 2)" class="bi bi-linkedin" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+       </svg>
+       </div>
+
+        <div id="circleicon">
+        <i class="bi bi-tiktok"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="rgb(2, 65, 2)" class="bi bi-tiktok" viewBox="0 0 16 16">
+        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+        </svg>       
+        </div>
+
+        
+        <div id="circleicon">
+        <i class="bi bi-twitter"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="rgb(2, 65, 2)" class="bi bi-twitter" viewBox="0 0 16 16">
+       <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+      </svg>
+       </div>
+
+
+        <div id="circleicon">
+        <i class="bi bi-pinterest"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="rgb(2, 65, 2)" class="bi bi-pinterest" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+        </svg>  
+        </div>
+
+
+        <div id="circleicon">
+        <i class="bi bi-wechat"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="rgb(2, 65, 2)" class="bi bi-wechat" viewBox="0 0 16 16">
+        <path d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.32.32 0 0 0-.12.366l.218.81a.6.6 0 0 1 .029.117.166.166 0 0 1-.162.162.2.2 0 0 1-.092-.03l-1.057-.61a.5.5 0 0 0-.256-.074.5.5 0 0 0-.142.021 5.7 5.7 0 0 1-1.576.22M9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.6.6 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.63.63 0 0 0 .098.356"/>
+        <path d="M0 6.826c0 1.455.781 2.765 2.001 3.656a.385.385 0 0 1 .143.439l-.161.6-.1.373a.5.5 0 0 0-.032.14.19.19 0 0 0 .193.193q.06 0 .111-.029l1.268-.733a.6.6 0 0 1 .308-.088q.088 0 .171.025a6.8 6.8 0 0 0 1.625.26 4.5 4.5 0 0 1-.177-1.251c0-2.936 2.785-5.02 5.824-5.02l.15.002C10.587 3.429 8.392 2 5.796 2 2.596 2 0 4.16 0 6.826m4.632-1.555a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0m3.875 0a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0"/>
+        </svg>
+        </div>
+
+        <div id="circleicon">
+        <i class="bi bi-whatsapp"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="rgb(2, 65, 2)" class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+        </div>
+
+        <div id="circleicon">
+        <i class="bi bi-twitter-x"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="rgb(2, 65, 2)" class="bi bi-twitter-x" viewBox="0 0 16 16">
+       <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+        </svg>
+        </div>
+</div>
+
+
+
+
+   </div>
+
+    <div id="time">
+      <i class="bi bi-clock-history"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-clock-history" viewBox="0 0 16 16">
+      <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+      <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+      <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+      </svg>
+    </div>
+      <p id="time2">Availability In Real Time</p>
+
+
+    <div id="tic">
+      <i class="bi bi-ticket"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-ticket" viewBox="0 0 16 16">
+      <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5z"/>
+      </svg>
+    </div>
+    <p id="tic1">Fast track entry tickets</p>
+
+    <div id="reviewstars">
+      <i class="bi bi-stars"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-stars" viewBox="0 0 16 16">
+      <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+      </svg>
+      </div>
+      <p id="tic2">Verified Customer <br><span>Review</span></p>
+
+
+
+    <div id="delivery">
+     <img src="images1/paris deli.png" alt="">
+    </div>
+    <p id="delivery1">Delivery To Your Hotel</p>
+
+
+<br><br><br><br>
+                 
+<div id="listing" >
+<br><br><br><br><br>
+<table cellpadding="10" cellspacing="5">  
+  <tr>
+<td id="pointsss">
+  <ul>
+    <li><a href="#">DISCOVER PARIS</a></li>
+    <li><a href="#">THINGS TO GO</a></li>
+    <li><a href="#">EVENTS</a></li>
+    <li><a href="#">PLAN YOUR STAY</a></li>
+    <li><a href="#">CRUISES IN PARIS</a></li>
+    <li><a href="#">RESTAURANTS OPEN AT NIGHT</a></li>
+    <li><a href="#">SHOPPING IN PARIS</a></li>
+    <li><a href="#">PARIS DISTRICTS</a></li>
+    <li><a href="#">TRANSPORT PARIS</a></li>
+  </ul>
+</td>    
+
+<td id="pointsss1">
+  <ul>
+    <li><a href="#">ABOUT US</a></li>
+    <li><a href="#">INFORMATION POINTS</a></li>
+    <li><a href="#">NEWS</a></li>
+    <li><a href="#">PRATICAL INFO</a></li>
+    <li><a href="#">CONTACT US</a></li>
+  </ul>
+</td>
+<td id="pointsss2">
+  <ul>
+    <li><a href="#">LEGAL INFORMATION AND PERSONAL DATA</a></li>
+    <li><a href="#">GENERAL CONDITIONS OF SALE  AND TERMS OF USE</a></li>
+    <li><a href="#">CUSTOMER CENTER</a></li>
+    <li><a href="#">FAQ</a></li>
+  </ul>
+
+</td>
+<td id="pointsss3">
+  <ul>
+    <li><a href="#">OUR TOP 10 ACTIVITIES</a></li>
+    <li><a href="#">MUSEUMS AND MONUMENTS</a></li>
+    <li><a href="#">PARIS PASSLIB'</a></li>
+    <li><a href="#">TICKETS</a></li>
+  </ul>
+</td>
+  </tr>
+</table> 
+<br><br><br>
+ <center><p id="break"> COPYRIGHT © PARIS JE T'AIME - TOURIST OFFICE 2015 - 2025 </p></center> 
+</div>
+
+
+<!-- search and Hamburger script -->
+<script>
+  function toggleMenu1() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+  }
+
+  function toggleMenu2() {
+    document.getElementById("mobileMenu1").classList.toggle("active");
+  }
+
+  function toggleSearch() {
+      document.getElementById('searchPanel').classList.toggle('active');
+    }
+  function showButton() {
+      const input = document.getElementById("searchInput").value.trim();
+      const button = document.getElementById("searchBtn");
+      button.style.display = input.length > 0 ? "inline-block" : "none";
+  }
+   
+  </script>
+  
+<!-- slider script -->
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+</html>
